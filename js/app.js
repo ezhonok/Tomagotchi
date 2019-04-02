@@ -7,30 +7,70 @@ console.log('up and running');
 
 
 class Tamagotchi {
-	constructor (name, ){
+	constructor (name){
 		this.age = 0;
-		this.sleepiness = 1;
-		this.boredom = 1;
-		this.hunger = 1;
+		this.sleepiness = 1; //pulling value in from
+		this.boredom = 1; //pulling value in from
+		this.hunger = 1; //pulling value in from
 		this.name = name
 	}
+
+	feed() {
+		console.log("feed!!!!");
+		$('#buttoncontainer').append(`Yumm! Thank you!`);
+		$('#buttonfeed').empty();
+		$('#buttonfeed').append(`🌮`);
+	}
 }
-	const valueofInput = $('#input-name').val();
-	const woodchuck = new Tamagotchi(valueofInput)
 
-console.log(woodchuck);
 
-const game = {
-	gameStarted: false,
-	// clock: 0,
 	// setInterval (() => {
 
 	// },500)
 
+const game = {
+	// everything i need to keep track of goes here
+	gameStarted: false,
+	clock: 0,
+	tamaEssence: null,
+
+	start: function (name) {
+		
+		// creating the tomagotchi
+		const woodchuck = new Tamagotchi(name)
+		console.log(woodchuck);
+		this.tamaEssence = woodchuck
+		$('#formContainer').append(`I am ${woodchuck.name} and I am alive! Je pense donc je suis`);
+		$('form').remove();
+	},
+	startTimer() {
+		//setInterval 
+
+		setInterval(
+
+			// this function gets run.....
+			() => {
+				// all code in here gets run every second
+				this.clock++	
+				console.log(this.clock);
+			}, 
+
+			// ....every this many ms
+			1000
+		)
+
+
+	}
 }
 
-console.log(woodchuck);
 
+for(let i = 0; i < 100; i++) {
+	if (i % 5 === 0) {
+		console.log(i);
+	}
+	// console.log(i);
+
+}
 // const character = {
 // 	woodchuck: 
 // 	console.log();
@@ -49,21 +89,16 @@ $('#tamacontainer').on('click', (event)	 => {
 // });
 
 
-$('#name-subm-bttn').click(function() {
-	console.log("submit clicked");
+$('#name-subm-bttn').on('click', function() {
+	// get the name from the dom
 	const valueofInput = $('#input-name').val();
-	$('#formContainer').append(`I am ${valueofInput} and I am alive! Je pense donc je suis`);
-	$('form').remove();
-	console.log(valueofInput);
-	// console.log(woodchuck);//to check if right
-
+	game.start(valueofInput)
 });
+
 
 $('#buttonfeed').click(function(){
 	console.log("feed button clicked");
-	$('#buttoncontainer').append(`Yumm! Thank you!`);
-	$('#buttonfeed').empty();
-	$('#buttonfeed').append(`🌮`);
+
 
 });
 
@@ -75,13 +110,12 @@ $('#buttonsleep').click(function(){
 });
 
 
-
-	const playWithMe = $('#buttonplay').click(function(){
+const playWithMe = $('#buttonplay').click(function(){
 	console.log("play button clicked");
 	$('#buttoncontainer').append(` That was fun! Woof!`);
 	$('#buttonplay').empty();
 	$('#buttonplay').append(`🎮`);//try using math.random for these
-	});	
+});	
 
 
 
