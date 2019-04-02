@@ -1,26 +1,40 @@
 body {
-	background-color: lightsteelblue;
+	background-color: #7F87A1;
 }
 
 #formContainer {
 	height: 70px;
-	width: 200px;
+	width: 700px;
 /*	border: solid 2px black;*/
 	display: flex;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 20px;
 
 /*	justify-content: center;
 */}
 
+#inner-window {
+	width: 400px;
+	height: 450px;
+	border-radius: 60px;
+	border: solid 1px black;
+	background-color: #4E530D;
+	display: flex;
+	align-items: flex-end;
+}
 
 #tamacontainer { 
 	width: 450px;
 	height: 500px;
-	background-color: pink;
+	background-color: crimson;
 	border-radius: 50px;
-	border: solid 2px black;
+	border: solid 10px black;
 	font-size: 30px;
 	display: flex;
 	align-items: flex-end;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
  }
 
 
@@ -30,11 +44,12 @@ body {
 	height: 200px;
 /*	background-color: white;
 	border: solid 2px black;*/
-	font-size: 30px;
+	font-size: 20px;
 	align-items: center;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-bottom: 250px;
+	font-family: 'Permanent Marker', cursive;
+	margin-bottom: 230px;
 	margin-left: 10px;
 
  }
@@ -43,15 +58,12 @@ body {
 #buttonfeed, #buttonplay, #buttonsleep {
 	height: 50px;
 	width: 50px;
-	border: 20px, solid brown;
-	border-radius: 10px;
-	font-size: 40px;
+	border-radius: 20px;
+	font-size: 38px;
 	font-family: 'Permanent Marker', cursive;
 	color: black;
 	background-color: teal;
-	border: solid 2px gray;
-	justify-content: center;
-	flex-direction: row;
+	border: solid 3px gray;
 	margin-top: 10px;
 /*	margin-bottom: 100px;
 */}
