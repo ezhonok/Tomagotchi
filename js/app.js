@@ -15,7 +15,7 @@ class Tamagotchi {
 	}
 }
 
-
+console.log(Tamagotchi);
 
 const game = {
 
@@ -25,10 +25,30 @@ const game = {
 
 
 
+// //jquery
+$('#tamacontainer').on('click', (event) => {
+	console.log(event.target);
+})
+// const $feedButton = $('#buttonfeed')
+// console.log($feedButton);
+
+
+// $('#feedButton').click(function() {
+// 	const $displayFood = $('food');
+
+
+$('#name-subm-bttn').click(function() {
+	console.log("submit clicked");
+	const valueofInput = $('#input-name').val();
+	console.log(valueofInput);
+});
 
 
 
 
+$('form').on('submit', (e) => {
+	e.preventDefault();
+})
 
 
 

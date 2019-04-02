@@ -1,3 +1,78 @@
 body {
 	background-color: lightsteelblue;
 }
+
+#formContainer {
+	height: 70px;
+	width: 200px;
+/*	border: solid 2px black;*/
+	display: flex;
+
+/*	justify-content: center;
+*/}
+
+
+#tamacontainer { 
+	width: 450px;
+	height: 500px;
+	background-color: pink;
+	border-radius: 50px;
+	border: solid 2px black;
+	font-size: 30px;
+	display: flex;
+	align-items: flex-end;
+ }
+
+
+ #buttoncontainer {
+ 	order: 1;
+ 	width: 100px;
+	height: 200px;
+/*	background-color: white;
+	border: solid 2px black;*/
+	font-size: 30px;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 250px;
+	margin-left: 10px;
+
+ }
+
+
+#buttonfeed, #buttonplay, #buttonsleep {
+	height: 50px;
+	width: 50px;
+	border: 20px, solid brown;
+	border-radius: 10px;
+	font-size: 40px;
+	font-family: 'Permanent Marker', cursive;
+	color: black;
+	background-color: teal;
+	border: solid 2px gray;
+	justify-content: center;
+	flex-direction: row;
+	margin-top: 10px;
+/*	margin-bottom: 100px;
+*/}
+
+
+#tamabody {
+	background-image: url("https://i.pinimg.com/236x/9f/74/f8/9f74f8bed366bb03c63baee96a3fe5a4--cartoon-movies-kid-movies.jpg");
+	border-radius: 60px;
+	border: solid 2px black;
+	font-size: 20px;
+	font-family: 'Permanent Marker', cursive;
+	color: black;
+	height: 200px;
+	width: 200px;
+	align-items: flex-end;
+	order: 2;
+	margin-bottom: 10px;
+
+}
+
+
+
+
+
