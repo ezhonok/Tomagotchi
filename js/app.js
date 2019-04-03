@@ -14,20 +14,22 @@ console.log('up and running');
 // Boredom (1-10 scale)
 // Age
 // Increase your pet's age every x minutes
-
+// feed your pet - clear stats
+// turn off the lights & clear voredom stats
+// play with pet - clear stats
+// Style the page
+// turn the lights back on
 
 // In Progress:
-// feed your pet
+
+// play with your pet
 
 
 //Pending:
-// turn off the lights
-// play with your pet
 // Your pet should die if Hunger, Boredom, or Sleepiness hits 10.
 // Morph your pet at certain ages.
-
 // Animate your pet across the screen while it's alive.
-// Style the page.
+
 
 
 
@@ -49,7 +51,19 @@ class Tamagotchi {
 	}
 	sleep() {
 		$('#inner-window').css('background', 'black');
+		$('#tamabody').css('background', 'url("http://3.bp.blogspot.com/-Ks2RHr83la0/UkDVIa_msiI/AAAAAAAAAC8/Ph5G0qXaMco/s1600/zzz.gif")')
+		// $('#buttonfeed').css('background-color', 'black', 'border', 'black')
+		// $('#buttonplay')
+		// $('#buttonsleep')
+		$('#buttonsleep').empty()
+		$('#buttonsleep').append('🌞')
 		game.sleepiness = 0;
+	}
+	wakeUp() {
+		$('#buttonsleep').empty()
+		$('#buttonsleep').append('✨')
+		$('#inner-window').css('background', 'url("https://content.audiospace.co/stations/40/files/News/sky-night-street-polska.jpg')
+		$('#tamabody').css('background', 'url("https://i.pinimg.com/236x/9f/74/f8/9f74f8bed366bb03c63baee96a3fe5a4--cartoon-movies-kid-movies.jpg"')
 	}
 	play() {
 		$('#tamabody').append(` That was fun! Woof!`);
@@ -124,6 +138,9 @@ const game = {
 		if (this.clock % 60 === 0) {
 			this.age++
 			$('#age').text("Age: " + this.age)
+		}
+		if (this.age === 2) {
+			$('tamabody').css('')
 		}
 	},
 
@@ -204,7 +221,9 @@ $('#buttonplay').click(function(){
 });	
 
 
-
+$('#buttonsleep').dblclick(function(){
+	game.tamaEssence.wakeUp()
+});
 
 
 
