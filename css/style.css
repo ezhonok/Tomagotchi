@@ -1,77 +1,98 @@
 body {
-	background-color: #7F87A1;
+	background-image: url("https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
 }
+
 
 #formContainer {
 	height: 70px;
 	width: 700px;
 /*	border: solid 2px black;
 */	display: flex;
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Dancing Script', cursive;
+
 	font-size: 20px;
 
-	justify-content: flex-start;
+	justify-content: space-between;
+	flex-direction: row;
 }
 
 #input-name {
 	height: 40px;
 	width: 400px;
-	font-family: 'Permanent Marker', cursive;
-	font-size: 20px;
+	font-family: 'Dancing Script', cursive;
+	font-size: 30px;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	/*	border-radius: 10px;
 */}
 
 #name-subm-bttn {
-	font-family: 'Permanent Marker', cursive;
-	font-size: 10px;
+	font-family: 'Dancing Script', cursive;
+	font-size: 15px;
 /*	border-radius: 10px;
 */	height: 40px;
 	width: 60px;
 }
 
 #inner-window {
-	width: 400px;
+	width: 380px;
 	height: 450px;
 	border-radius: 60px;
 	border: solid 1px black;
-	background-color: #4E530D;
+	background-image: url("https://content.audiospace.co/stations/40/files/News/sky-night-street-polska.jpg");
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 50% 50% 50% 50%/ 60% 60% 40% 40%;
+		flex-wrap: nowrap;
+
+
 }
 
 #stats {
-	border: solid 1px black;
+	width: 180px;
+	height: 100px;
+	border-radius: 40%;
+	border: solid 1px yellow;
+	background-color: #4E530D;
 	justify-content: flex-start;
+	margin-top: 10px;
+	flex-wrap: nowrap;
+	font-size: 16px;
+	font-family: 'Dancing Script', cursive;
+
 }
 
 #tamacontainer { 
+	display: block;
 	width: 450px;
-	height: 500px;
-	background-color: crimson;
-	border-radius: 50px;
-	border: solid 10px black;
+	height: 530px;
+	background-color: purple;
+	border-radius: 50% 50% 50% 50%/ 60% 60% 40% 40%;
+	border: solid 3px black;
 	font-size: 30px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+		flex-wrap: nowrap;
+
  }
 
 
  #buttoncontainer {
  	width: 270px;
 	height: 100px;
-	border: solid 2px black;
-	font-size: 20px;
+/*	border: solid 2px black;
+*/	font-size: 20px;
 	font-family: 'Permanent Marker', cursive;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: nowrap;
  }
 
 
@@ -83,18 +104,18 @@ body {
 	font-family: 'Permanent Marker', cursive;
 	color: black;
 	background-color: teal;
-	border: solid 3px gray;
+	border: solid 1px yellow;
 	margin-top: 10px;
 	justify-content: flex-start;
-/*	flex-direction: 
-	align-items: ;*/
+	flex-wrap: nowrap;
+
 
 }
 
 
 #tamabody {
 	background-image: url("https://i.pinimg.com/236x/9f/74/f8/9f74f8bed366bb03c63baee96a3fe5a4--cartoon-movies-kid-movies.jpg");
-	border-radius: 60px;
+	border-radius: 50% 50% 50% 50%/ 60% 60% 40% 40%;
 	border: solid 2px black;
 	font-size: 20px;
 	font-family: 'Permanent Marker', cursive;
