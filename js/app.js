@@ -128,6 +128,11 @@ const game = {
 			$('#inner-window').remove()
 			$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
 		}
+		// if (this.hunger >=5) {
+		// 	$('#tamacontainer').css('background', 'url("https://media1.tenor.com/images/f63612a3e36f499748c5bacc649061fe/tenor.gif?itemid=10066144")')
+		// }
+		// if (this.hunger <=4)
+		// 	$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
 	},
 
 	playWithMe() {
@@ -159,13 +164,14 @@ const game = {
 			this.age++
 			$('#age').text("Age: " + this.age)
 		}
-		if (this.age === 2) {
-			$('tamabody').css('')
+		if (this.age % 2 === 0) {
+			$('#tamabody').css('background', 'url("https://orig00.deviantart.net/aa4a/f/2017/042/0/6/output_r62fts_by_shadythebluewolf-dayr1uy.gif")')
 		}
 	},
 
 	feedMePrompt() {
 		if (this.hunger === 5) {
+
 		}
 
 	},
@@ -203,7 +209,7 @@ const game = {
 			}, 
 
 			// ....every this many ms
-			1000
+			500
 		)
 
 
