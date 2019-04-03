@@ -18,6 +18,8 @@ body {
 	width: 400px;
 	font-family: 'Permanent Marker', cursive;
 	font-size: 20px;
+	display: flex;
+	justify-content: flex-start;
 	/*	border-radius: 10px;
 */}
 
@@ -36,7 +38,13 @@ body {
 	border: solid 1px black;
 	background-color: #4E530D;
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
+	flex-direction: column;
+}
+
+#stats {
+	border: solid 1px black;
+	justify-content: flex-start;
 }
 
 #tamacontainer { 
@@ -55,19 +63,15 @@ body {
 
 
  #buttoncontainer {
- 	order: 1;
- 	width: 100px;
-	height: 200px;
-/*	background-color: white;
-	border: solid 2px black;*/
+ 	width: 270px;
+	height: 100px;
+	border: solid 2px black;
 	font-size: 20px;
-	align-items: center;
-	flex-direction: row;
-	justify-content: space-between;
 	font-family: 'Permanent Marker', cursive;
-	margin-bottom: 230px;
-	margin-left: 10px;
-
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
  }
 
 
@@ -81,8 +85,11 @@ body {
 	background-color: teal;
 	border: solid 3px gray;
 	margin-top: 10px;
-/*	margin-bottom: 100px;
-*/}
+	justify-content: flex-start;
+/*	flex-direction: 
+	align-items: ;*/
+
+}
 
 
 #tamabody {
@@ -95,8 +102,6 @@ body {
 	height: 200px;
 	width: 200px;
 	align-items: flex-end;
-	order: 2;
-	margin-bottom: 10px;
 
 }
 

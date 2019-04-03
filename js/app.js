@@ -9,9 +9,9 @@ console.log('up and running');
 class Tamagotchi {
 	constructor (name){
 		this.age = 0;
-		this.sleepiness = 1; //pulling value in from
-		this.boredom = 1; //pulling value in from
-		this.hunger = 1; //pulling value in from
+		this.sleepiness = 1;
+		this.boredom = 1;
+		this.hunger = 1;
 		this.name = name
 	}
 
@@ -21,18 +21,28 @@ class Tamagotchi {
 		$('#buttonfeed').empty();
 		$('#buttonfeed').append(`🌮`);
 	}
+	sleep() {
+		console.log("lights off");
+		$('#inner-window').css('background', 'black');
+	}
+	play() {
+		$('#buttoncontainer').append(` That was fun! Woof!`);
+		$('#buttonplay').empty();
+		$('#buttonplay').append(`🎮`);
+	}
+
 }
 
 
-	// setInterval (() => {
 
-	// },500)
 
 const game = {
 	// everything i need to keep track of goes here
-	gameStarted: false,
 	clock: 0,
 	tamaEssence: null,
+	hunger: null,
+	boredom: null,
+	sleepiness: null,
 
 	start: function (name) {
 		
@@ -42,7 +52,10 @@ const game = {
 		this.tamaEssence = woodchuck
 		$('#formContainer').append(`I am ${woodchuck.name} and I am alive! Je pense donc je suis`);
 		$('form').remove();
+		this.startTimer()
 	},
+
+
 	startTimer() {
 		//setInterval 
 
@@ -50,9 +63,22 @@ const game = {
 
 			// this function gets run.....
 			() => {
+				if (game.clock % 3 === 0) {
+				game.hunger++
+			}
+				if (game.clock % 5 === 0) {
+				game.boredom++
+			}
+				if (game.clock % 7 === 0) {
+				game.sleepiness++
+			}
 				// all code in here gets run every second
-				this.clock++	
-				console.log(this.clock);
+				game.clock++
+				// this.clock++	
+				console.log(game.clock +  ' clock');
+				console.log(game.hunger + ' hunger');
+				console.log(game.sleepiness + ' sleepiness');
+				console.log(game.boredom + ' boredom');
 			}, 
 
 			// ....every this many ms
@@ -64,29 +90,12 @@ const game = {
 }
 
 
-for(let i = 0; i < 100; i++) {
-	if (i % 5 === 0) {
-		console.log(i);
-	}
-	// console.log(i);
-
-}
-// const character = {
-// 	woodchuck: 
-// 	console.log();
-// }
-// 
-//solve: access woodchuck 
 
 // // //jquery
 $('#tamacontainer').on('click', (event)	 => {
 	console.log(event.target);
 })
 
-
-// $('#feedButton').click(function() {
-// 	const $displayFood = $('food');
-// });
 
 
 $('#name-subm-bttn').on('click', function() {
@@ -97,32 +106,23 @@ $('#name-subm-bttn').on('click', function() {
 
 
 $('#buttonfeed').click(function(){
-	console.log("feed button clicked");
-
-
+	game.tamaEssence.feed()
 });
 
 
 $('#buttonsleep').click(function(){
-	console.log("sleep button clicked");
-	$('#inner-window').css('background', 'black', 'opulence');
-
+	game.tamaEssence.sleep()
 });
 
 
-const playWithMe = $('#buttonplay').click(function(){
-	console.log("play button clicked");
-	$('#buttoncontainer').append(` That was fun! Woof!`);
-	$('#buttonplay').empty();
-	$('#buttonplay').append(`🎮`);//try using math.random for these
+$('#buttonplay').click(function(){
+	game.tamaEssence.play()
 });	
 
 
 
 
-// $('name-subm-bttn').on('click', () => {
-// 	const valueofInput = $('input-name').
-// })
+
 
 
 $('form').on('submit', (e) => {
