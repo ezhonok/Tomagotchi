@@ -2,6 +2,26 @@ body {
 	background-image: url("https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
 }
 
+#curtain {
+	position: fixed;
+	width: 500px;
+	height: 600px;
+	border: solid 3px yellow;
+	background-image: url("https://cdnb.artstation.com/p/assets/images/images/015/358/707/large/daniel-jimenez-1548053606864.jpg?1548053656");
+	font-family: 'Caveat', cursive;
+	color: ivory;
+	font-size: 25px;
+	padding: 20px;
+
+
+}
+
+#box {
+	font-family: 'Caveat', cursive;
+	color: white;
+	font-size: 30px;
+	padding: 20px;
+}
 
 #formContainer {
 	height: 70px;
@@ -115,19 +135,24 @@ body {
 
 
 #tamabody {
-	background-image: url("https://i.pinimg.com/236x/9f/74/f8/9f74f8bed366bb03c63baee96a3fe5a4--cartoon-movies-kid-movies.jpg");
+	/*background-image: url("https://i.pinimg.com/236x/9f/74/f8/9f74f8bed366bb03c63baee96a3fe5a4--cartoon-movies-kid-movies.jpg");*/
+	background-image: url("https://i.gifer.com/embedded/download/91S8.gif");
+	/*background-image: url("https://orig00.deviantart.net/aa4a/f/2017/042/0/6/output_r62fts_by_shadythebluewolf-dayr1uy.gif");*/
 	border-radius: 50% 50% 50% 50%/ 60% 60% 40% 40%;
 	border: solid 2px black;
 	font-size: 20px;
 	font-family: 'Permanent Marker', cursive;
 	color: black;
-	height: 200px;
-	width: 200px;
+	height: 220px;
+	width: 220px;
 	align-items: flex-end;
 
 }
 
+/*img {
+	max-width: 100%;
+	max-height: 100%;
 
-
-
+}
+*/
 

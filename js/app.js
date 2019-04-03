@@ -43,9 +43,12 @@ class Tamagotchi {
 	}
 
 	feed() {
-		$('#tamacontainer').append(`Yumm! Thank you!`);
+		$('#tamacontainer').append();
 		$('#buttonfeed').empty();
 		$('#buttonfeed').append(`🌮`);
+		$('formContainer').empty();
+		$('#formContainer').append(`💕Yummm! Thank you!💕`);
+		
 		game.hunger = 0;
 
 	}
@@ -63,12 +66,13 @@ class Tamagotchi {
 		$('#buttonsleep').empty()
 		$('#buttonsleep').append('✨')
 		$('#inner-window').css('background', 'url("https://content.audiospace.co/stations/40/files/News/sky-night-street-polska.jpg')
-		$('#tamabody').css('background', 'url("https://i.pinimg.com/236x/9f/74/f8/9f74f8bed366bb03c63baee96a3fe5a4--cartoon-movies-kid-movies.jpg"')
+		$('#tamabody').css('background', 'url("https://i.gifer.com/embedded/download/91S8.gif"')
 	}
 	play() {
-		$('#tamabody').append(` That was fun! Woof!`);
 		$('#buttonplay').empty();
 		$('#buttonplay').append(`🎮`);
+		$('#buttonplay').animate({top:'10px'}, {bottom:'1opx'})
+		$('#formContainer').append(`💕That was fun! WOOF!💕`);
 		game.boredom = 0;
 	}
 
@@ -101,6 +105,9 @@ const game = {
 	sleepiness: null,
 	age: 0,
 
+	clickBox() {
+		$('#curtain').remove()
+	},
 	start: function (name) {
 		
 		// creating the tomagotchi
@@ -238,7 +245,10 @@ $('#buttonsleep').dblclick(function(){
 	game.tamaEssence.wakeUp()
 });
 
+$('#box').click(function(){
+	game.clickBox()
 
+});
 
 
 $('form').on('submit', (e) => {
