@@ -6,11 +6,11 @@ body {
 	position: fixed;
 	width: 500px;
 	height: 600px;
-	border: solid 3px yellow;
-	background-image: url("https://cdnb.artstation.com/p/assets/images/images/015/358/707/large/daniel-jimenez-1548053606864.jpg?1548053656");
+	border: solid 3px darkblue;
+	background-image: url("http://www.anasfim.com/p/2018/04/narrow-ruled-lined-paper-on-letter-sized-in-portrait-background-for-wrinkled-lined-paper-background.jpg");
 	font-family: 'Caveat', cursive;
-	color: ivory;
-	font-size: 25px;
+	color: blue;
+	font-size: 27px;
 	padding: 20px;
 
 
@@ -21,6 +21,12 @@ body {
 	color: white;
 	font-size: 30px;
 	padding: 20px;
+	color: blue;
+}
+
+#sadFact {
+	margin-left: 0;
+	color: black;
 }
 
 #formContainer {
