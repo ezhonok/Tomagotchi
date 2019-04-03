@@ -19,14 +19,14 @@ console.log('up and running');
 // play with pet - clear stats
 // Style the page
 // turn the lights back on
+// Your pet should die if Hunger, Boredom, or Sleepiness hits 10.
 
 // In Progress:
-
-// play with your pet
+// feed your pet - result
+// play with your pet - result
 
 
 //Pending:
-// Your pet should die if Hunger, Boredom, or Sleepiness hits 10.
 // Morph your pet at certain ages.
 // Animate your pet across the screen while it's alive.
 
@@ -43,7 +43,7 @@ class Tamagotchi {
 	}
 
 	feed() {
-		$('#tamabody').append(`Yumm! Thank you!`);
+		$('#tamacontainer').append(`Yumm! Thank you!`);
 		$('#buttonfeed').empty();
 		$('#buttonfeed').append(`🌮`);
 		game.hunger = 0;
@@ -56,7 +56,7 @@ class Tamagotchi {
 		// $('#buttonplay')
 		// $('#buttonsleep')
 		$('#buttonsleep').empty()
-		$('#buttonsleep').append('🌞')
+		$('#buttonsleep').append('💡')
 		game.sleepiness = 0;
 	}
 	wakeUp() {
@@ -117,6 +117,10 @@ const game = {
 				this.hunger++
 				$('#hunger').text("Hunger: " + this.hunger)
 		}
+		if (this.hunger >=10) {
+			$('#inner-window').remove()
+			$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
+		}
 	},
 
 	playWithMe() {
@@ -124,12 +128,21 @@ const game = {
 				this.boredom++
 				$('#boredom').text("Boredom: " + this.boredom)
 		}
+		if (this.boredom >=10) {
+			$('#inner-window').remove()
+			$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
+
+		}
 	},
 
 	lightsOff() {
 		if (this.clock % 7 === 0) {
 			 this.sleepiness++
 			 $('#sleep').text("Sleepiness: " + this.sleepiness)
+		}
+		if (this.sleepiness >=10) {
+			$('#inner-window').remove()
+			$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
 
 		}
 	},

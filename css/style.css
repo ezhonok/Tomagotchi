@@ -77,7 +77,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-		flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	font-family: 'Permanent Marker', cursive;
 
  }
 
