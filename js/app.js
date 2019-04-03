@@ -20,15 +20,13 @@ console.log('up and running');
 // Style the page
 // turn the lights back on
 // Your pet should die if Hunger, Boredom, or Sleepiness hits 10.
+// Morph your pet at certain ages.
+// Animate your pet across the screen while it's alive.
+
 
 // In Progress:
 // feed your pet - result
 // play with your pet - result
-
-
-//Pending:
-// Morph your pet at certain ages.
-// Animate your pet across the screen while it's alive.
 
 
 
@@ -55,9 +53,6 @@ class Tamagotchi {
 	sleep() {
 		$('#inner-window').css('background', 'black');
 		$('#tamabody').css('background', 'url("http://3.bp.blogspot.com/-Ks2RHr83la0/UkDVIa_msiI/AAAAAAAAAC8/Ph5G0qXaMco/s1600/zzz.gif")')
-		// $('#buttonfeed').css('background-color', 'black', 'border', 'black')
-		// $('#buttonplay')
-		// $('#buttonsleep')
 		$('#buttonsleep').empty()
 		$('#buttonsleep').append('💡')
 		game.sleepiness = 0;
@@ -94,8 +89,6 @@ class Tamagotchi {
 }
 
 
-
-
 const game = {
 	// everything i need to keep track of goes here
 	clock: 0,
@@ -123,27 +116,25 @@ const game = {
 		if (this.clock % 3 === 0) {
 				this.hunger++
 				$('#hunger').text("Hunger: " + this.hunger)
+				$('#tamabody').css('height', '225px', 'width', '225px')
+
 		}
 		if (this.hunger >=10) {
 			$('#inner-window').remove()
 			$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
 		}
-		// if (this.hunger >=5) {
-		// 	$('#tamacontainer').css('background', 'url("https://media1.tenor.com/images/f63612a3e36f499748c5bacc649061fe/tenor.gif?itemid=10066144")')
-		// }
-		// if (this.hunger <=4)
-		// 	$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
 	},
 
 	playWithMe() {
 		if (this.clock % 5 === 0) {
 				this.boredom++
 				$('#boredom').text("Boredom: " + this.boredom)
+				$('#tamabody').css('height', '210px', 'width', '210px')
+
 		}
 		if (this.boredom >=10) {
 			$('#inner-window').remove()
 			$('#tamacontainer').css('background', 'url("https://media0.giphy.com/media/oYyrxpOuuHXCo/giphy.gif")')
-
 		}
 	},
 
@@ -176,15 +167,6 @@ const game = {
 
 	},
 
-	playWithMePrompt() {
-
-	},
-
-	lightsOffPrompt() {
-
-	},
-
-
 	startTimer() {
 		//setInterval 
 
@@ -196,20 +178,19 @@ const game = {
 				this.playWithMe()
 				this.lightsOff()
 				this.aging()
+
 			
 				// all code in here gets run every second
 				this.clock++
-				// this.clock++	
-
-			//if hunger reaches 5 - prompt to feed - where to store
+					
 				console.log(game.clock +  ' clock');
 				console.log(game.hunger + ' hunger');
 				console.log(game.sleepiness + ' sleepiness');
 				console.log(game.boredom + ' boredom');
 			}, 
 
-			// ....every this many ms
-			500
+			
+			1000
 		)
 
 
@@ -218,7 +199,7 @@ const game = {
 
 
 
-// // //jquery
+
 $('#tamacontainer').on('click', (event)	 => {
 	console.log(event.target);
 })
@@ -226,7 +207,6 @@ $('#tamacontainer').on('click', (event)	 => {
 
 
 $('#name-subm-bttn').on('click', function() {
-	// get the name from the dom
 	const valueofInput = $('#input-name').val();
 	game.start(valueofInput)
 });
