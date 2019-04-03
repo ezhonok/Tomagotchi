@@ -8,21 +8,24 @@ console.log('up and running');
 // Add the ability to name your pet.
 // Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
 // Add buttons to the screen to feed your pet
-
-// In Progress:
 // Display the following metrics for your pet:
 // Hunger (1-10 scale)
 // Sleepiness (1-10 scale)
 // Boredom (1-10 scale)
 // Age
+// Increase your pet's age every x minutes
+
+
+// In Progress:
+// feed your pet
+
 
 //Pending:
 // turn off the lights
 // play with your pet
-// feed your pet
-// Increase your pet's age every x minutes
 // Your pet should die if Hunger, Boredom, or Sleepiness hits 10.
 // Morph your pet at certain ages.
+
 // Animate your pet across the screen while it's alive.
 // Style the page.
 
@@ -38,19 +41,21 @@ class Tamagotchi {
 	}
 
 	feed() {
-		console.log("feed!!!!");
-		$('#buttoncontainer').append(`Yumm! Thank you!`);
+		$('#tamabody').append(`Yumm! Thank you!`);
 		$('#buttonfeed').empty();
 		$('#buttonfeed').append(`🌮`);
+		game.hunger = 0;
+
 	}
 	sleep() {
-		console.log("lights off");
 		$('#inner-window').css('background', 'black');
+		game.sleepiness = 0;
 	}
 	play() {
-		$('#buttoncontainer').append(` That was fun! Woof!`);
+		$('#tamabody').append(` That was fun! Woof!`);
 		$('#buttonplay').empty();
 		$('#buttonplay').append(`🎮`);
+		game.boredom = 0;
 	}
 
 
